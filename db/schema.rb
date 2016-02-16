@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160216040504) do
+ActiveRecord::Schema.define(version: 20160216042033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,14 @@ ActiveRecord::Schema.define(version: 20160216040504) do
   end
 
   add_index "artworks", ["title"], name: "index_artworks_on_title", using: :btree
+
+  create_table "artworks_subjects", id: false, force: :cascade do |t|
+    t.integer "artwork_id", null: false
+    t.integer "subject_id", null: false
+  end
+
+  add_index "artworks_subjects", ["artwork_id"], name: "index_artworks_subjects_on_artwork_id", using: :btree
+  add_index "artworks_subjects", ["subject_id"], name: "index_artworks_subjects_on_subject_id", using: :btree
 
   create_table "subjects", force: :cascade do |t|
     t.text     "display_name"
