@@ -7,7 +7,7 @@ RUN apt-get -y update && apt-get -y upgrade
 
 RUN curl -sL https://deb.nodesource.com/setup_5.x | bash -
 
-RUN apt install -y nodejs
+RUN apt-get install -y nodejs
 
 RUN gem install bundler
 
