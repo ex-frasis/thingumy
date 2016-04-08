@@ -28,6 +28,10 @@ Vagrant.configure(2) do |config|
     gem install bundler
     bundle install --full-index -j4
 
+    bundle exec rake db:create
+    bundle exec rake db:setup
+    bundle exec rake db:migrate
+
     echo "alias serve='bin/rails s -b 0.0.0.0'" >> ~/.bashrc
 
     echo 'cd /vagrant' >> ~/.profile
