@@ -30,6 +30,7 @@ Vagrant.configure(2) do |config|
 
     echo "alias serve='bin/rails s -b 0.0.0.0'" >> ~/.bashrc
 
+    echo 'cd /vagrant' >> ~/.profile
     source ~/.profile
   SCRIPT
 end
