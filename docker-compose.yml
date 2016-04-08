@@ -1,5 +1,8 @@
 db:
     image: postgres
+    ports:
+        - "5432:5432"
+
 web:
     build: .
     command: bundle exec rake db:migrate && bin/rails s -b 0.0.0.0
