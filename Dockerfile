@@ -5,9 +5,9 @@ WORKDIR /src
 
 RUN apt-get -y update && apt-get -y upgrade
 
-# RUN curl -sL https://deb.nodesource.com/setup_0.12 | bash -
+RUN curl -sL https://deb.nodesource.com/setup_5.x | bash -
 
-# RUN apt install -y nodejs
+RUN apt install -y nodejs
 
 RUN gem install bundler
 
