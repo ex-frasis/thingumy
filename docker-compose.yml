@@ -6,6 +6,8 @@ services:
     web:
         build: .
         command: bundle exec bin/rails s -b 0.0.0.0 -p 3000
+        volumes:
+            - .:/src
         ports:
             - "3000:3000"
         depends_on:
