@@ -13,8 +13,8 @@ RUN gem install bundler
 
 RUN bundle install --full-index -j4
 
-RUN bundle exec rake db:create
+# RUN bundle exec rake db:create
 
-RUN bundle exec rake db:setup
+# RUN bundle exec rake db:setup
 
-RUN bundle exec rake db:migrate
+# RUN bundle exec rake db:migrate
