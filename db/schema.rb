@@ -52,8 +52,10 @@ ActiveRecord::Schema.define(version: 20160429022124) do
     t.text     "url",        null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "artwork_id"
   end
 
+  add_index "images", ["artwork_id"], name: "index_images_on_artwork_id", using: :btree
   add_index "images", ["url"], name: "index_images_on_url", using: :btree
 
   create_table "subjects", force: :cascade do |t|
@@ -62,4 +64,5 @@ ActiveRecord::Schema.define(version: 20160429022124) do
     t.datetime "updated_at",   null: false
   end
 
+  add_foreign_key "images", "artworks"
 end
