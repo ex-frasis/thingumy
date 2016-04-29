@@ -1,0 +1,12 @@
+<h1>
+  An Artwork
+</h1>
+
+<div>
+  <%= @artwork.title %>
+</div>
+
+<% @artwork.images.each do |image| %>
+  <%= image_tag image.url %>
+<% end %>
+
