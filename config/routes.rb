@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get '/home' => 'static_page#home'
 
   # artwork
-  get 'artwork/index' => 'artwork#index'
+  get 'artwork/' => 'artwork#index'
   get 'artwork/:id' => 'artwork#show'
 end

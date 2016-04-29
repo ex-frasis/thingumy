@@ -1,6 +1,6 @@
 class ArtworkController < ApplicationController
   def index
-
+    render :index
   end
 
   def show
