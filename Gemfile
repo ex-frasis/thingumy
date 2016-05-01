@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'material_design_lite-rails'
 gem 'rails', '4.2.4'
 gem 'rails', '4.2.4'
