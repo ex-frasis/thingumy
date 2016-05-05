@@ -1,11 +1,3 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-.nav {
-  li {
-    a {
-      font-size: 11px;
-      padding: 10px 10px;
-    }
-  }
-}
+@import "navigation";
