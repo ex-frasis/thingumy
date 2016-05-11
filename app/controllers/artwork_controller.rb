@@ -5,6 +5,7 @@ class ArtworkController < ApplicationController
 
   def show
     @artwork = Artwork.find(params[:id])
+    @comment = Comment.new(artwork: @artwork)
     render :show
   end
 end

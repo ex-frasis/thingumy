@@ -23,8 +23,7 @@
   </div>
 <% end %>
 
-<form action="/comments" method="post">
-  <input type="text">
-  <input type="submit" value="Submit comment">
-</form>
+<%= form_for @comment, url: "/comments" do |comment_form| %>
+  <%= comment_form.text_field :text %>
+<% end %>
 

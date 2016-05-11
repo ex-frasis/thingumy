@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   # artwork
   get 'artwork/' => 'artwork#index'
   get 'artwork/:id' => 'artwork#show'
+
+  resources :comments
 end
