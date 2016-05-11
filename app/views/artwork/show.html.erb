@@ -25,5 +25,6 @@
 
 <%= form_for @comment, url: "/comments" do |comment_form| %>
   <%= comment_form.text_field :text %>
+  <%= hidden_field_tag(:artwork_id, @artwork.id) %>
 <% end %>
 
