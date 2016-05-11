@@ -1,3 +1,12 @@
-// Place all the styles related to the Artwork controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.artwork-image {
+  img {
+    max-width: 100%;
+  }
+}
+
+.artist-name {
+  border-bottom: 1px black solid;
+}
+
+.artwork-title {
+}

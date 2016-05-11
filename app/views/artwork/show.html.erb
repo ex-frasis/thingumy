@@ -1,12 +1,37 @@
-<h1>
-  An Artwork
-</h1>
-
-<div>
-  <%= @artwork.title %>
+<div class="row">
+  <div class="col-xs-2"></div>
+  <div class="col-xs-7">
+    <div class="row">
+      <div class="col-xs-12 artist-name">
+        <div class="row">
+          <div class="col-xs-2"></div>
+          <div class="col-xs-8">
+            <h2 class="exfrasis-heading">
+              <%= @artwork.artist_name %>
+            </h2>
+          </div>
+          <div class="col-xs-2"></div>
+        </div>
+      </div>
+      <div class="col-xs-12 artwork-title">
+        <div class="row">
+          <div class="col-xs-2"></div>
+          <div class="col-xs-8">
+            <%= @artwork.title %>
+          </div>
+          <div class="col-xs-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-3">
+    HEART
+  </div>
 </div>
 
 <% @artwork.images.each do |image| %>
-  <%= image_tag image.url %>
+  <div class="col-xs-12 artwork-image">
+    <%= image_tag image.url %>
+  </div>
 <% end %>
 
