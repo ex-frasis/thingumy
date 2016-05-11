@@ -8,6 +8,13 @@
   }
 }
 
+.nav-image {
+  img {
+    height: 50px;
+  }
+  margin: 10px 10px 10px 10px; // top right bottom left
+}
+
 .nav-tabs {
   border-bottom: none;
   border-top: none;
