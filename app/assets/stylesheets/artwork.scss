@@ -6,7 +6,15 @@
 
 .artist-name {
   border-bottom: 1px black solid;
+  text-align: center;
+}
+
+.artwork-header {
+  margin-bottom: 10px;
 }
 
 .artwork-title {
+  font-size: 19px;
+  text-transform: uppercase;
+  text-align: center;
 }
