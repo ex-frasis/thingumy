@@ -17,9 +17,9 @@
   </div>
 </div>
 
-<% @artwork.images.each do |image| %>
+<% @artwork.comments.each do |comment| %>
   <div class="col-xs-12 artwork-image">
-    <%= image_tag image.url %>
+    <%= comment.text %>
   </div>
 <% end %>
 
