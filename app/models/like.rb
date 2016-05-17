@@ -1,4 +1,4 @@
 class Like < ActiveRecord::Base
-  has_one :artwork
-  has_one :user
+  belongs_to :artwork
+  belongs_to :user
 end
