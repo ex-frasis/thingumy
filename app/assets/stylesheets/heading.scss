@@ -6,7 +6,7 @@
 h3.exfrasis-heading {
   display: inline-block;
   font-size: 25px;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
   margin-top: 25px;
   margin-bottom: 15px;
 }
@@ -16,6 +16,10 @@ h2.exfrasis-heading {
   font-size: 18px;
   margin-top: 25px;
   margin-bottom: 3px;
+}
+
+h3.artist-heading {
+  width: 100%;
 }
 
 

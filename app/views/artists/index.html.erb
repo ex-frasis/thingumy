@@ -1,0 +1,9 @@
+<h3 class="exfrasis-heading artist-heading">
+  Featured Artists
+</h3>
+
+<% Artist.order(:first_name).each do |artist| %>
+  <div id="row">
+    <%= link_to artist.to_s, "/artist/#{artist.id}" %>
+  </div>
+<% end %>
