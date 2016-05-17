@@ -1,11 +1,14 @@
 class CommentsController < ApplicationController
   def create
-    @artwork = Artwork.find_by_id(artwork_id)
     @comment = Comment.create(
-      artwork: @artwork,
+      artwork: artwork,
       text: comment_text
     )
-    redirect_to "#{artwork_path}/#{@artwork.id}"
+    redirect_to "/artwork/#{artwork.id}"
+  end
+
+  def artwork
+    @artwork ||= Artwork.find_by_id(artwork_id)
   end
 
   protected
