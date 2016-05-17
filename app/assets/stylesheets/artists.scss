@@ -1,3 +1,11 @@
 .artist-list {
   overflow-y: scroll;
+  .artist-index-row {
+    a {
+      color: black;
+      font-size: 17px;
+      font-weight: 600px;
+    }
+    padding-left: 50px;
+  }
 }

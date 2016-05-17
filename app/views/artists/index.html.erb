@@ -4,7 +4,7 @@
 
 <div class="artist-list">
   <% Artist.order(:first_name).each do |artist| %>
-    <div id="row">
+    <div class="artist-index-row">
       <%= link_to artist.to_s, "/artist/#{artist.id}" %>
     </div>
   <% end %>
