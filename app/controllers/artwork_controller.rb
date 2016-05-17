@@ -1,11 +1,15 @@
 class ArtworkController < ApplicationController
-  def index
-    render :index
+  def show
+    @comment = Comment.new(artwork: artwork)
+    render :show
   end
 
-  def show
-    @artwork = Artwork.find(params[:id])
-    @comment = Comment.new(artwork: @artwork)
-    render :show
+  def artwork
+    @artwork ||= Artwork.find_by_id(artwork_id)
+  end
+
+  protected
+  def artwork_id
+    params.require("id")
   end
 end

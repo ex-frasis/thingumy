@@ -7,9 +7,7 @@ Rails.application.routes.draw do
   get '/exhibition' => 'static_page#exhibition'
 
   get 'artwork/:id' => 'artwork#show'
-
   get 'artists/' => 'artists#index'
-  get 'artist/:id' => 'artists#show'
 
   resources :comments
   resources :likes

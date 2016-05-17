@@ -3,10 +3,6 @@ class ArtistsController < ApplicationController
     render :index
   end
 
-  def show
-    binding.pry
-  end
-
   def artist
     @artist ||= Artist.find_by_id(artist_id)
   end

@@ -4,4 +4,8 @@ class Artist < ActiveRecord::Base
   def to_s
     "#{self.first_name} #{self.last_name}"
   end
+
+  def artwork
+    self.artworks.first
+  end
 end
