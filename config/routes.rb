@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get 'artwork/' => 'artwork#index'
   get 'artwork/:id' => 'artwork#show'
 
+  get 'artists/' => 'artists#index'
+  get 'artist/:id' => 'artists#show'
+
   resources :comments
   resources :likes
 end
