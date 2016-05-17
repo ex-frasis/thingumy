@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   get '/home' => 'static_page#home'
   get '/about' => 'static_page#about'
+  get '/exhibition' => 'static_page#exhibition'
 
-  get 'artwork/' => 'artwork#index'
   get 'artwork/:id' => 'artwork#show'
 
   get 'artists/' => 'artists#index'

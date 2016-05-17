@@ -7,4 +7,8 @@ class StaticPageController < ApplicationController
   def about
     render :about
   end
+
+  def exhibition
+    render :exhibition
+  end
 end
