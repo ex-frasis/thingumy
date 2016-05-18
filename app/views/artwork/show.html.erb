@@ -32,8 +32,10 @@
 <i id="trigger-right" class="fa fa-caret-left fa-5x"></i>
 
 <% @artwork.comments.each do |comment| %>
-  <div class="col-xs-12 artwork-comment">
-    <%= comment.text %>
+  <div class="artwork-comment">
+    <span class="artwork-comment-text">
+      <%= comment.text %>
+    </span>
   </div>
 <% end %>
 
