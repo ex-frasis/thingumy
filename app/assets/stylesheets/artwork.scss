@@ -22,3 +22,19 @@
 .artwork-comment {
   font-size: 16px;
 }
+
+.artwork-slider {
+  background-color: black;
+}
+
+#trigger-right {
+  position: absolute;
+  right: -2px;
+  top: 40vh;
+}
+
+#trigger-left {
+  position: absolute;
+  left: -2px;
+  top: 40vh;
+}

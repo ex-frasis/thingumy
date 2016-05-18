@@ -1,6 +1,11 @@
 var sliderize = function () {
-  $('#slider').slideReveal({
-    trigger: $('#trigger')
+  $('#artwork-slider-left').slideReveal({
+    trigger: $('#trigger-left')
+  });
+
+  $('#artwork-slider-right').slideReveal({
+    trigger: $('#trigger-right'),
+    position: "right"
   });
 }
 

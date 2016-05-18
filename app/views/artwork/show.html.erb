@@ -20,13 +20,16 @@
   </div>
 </div>
 
-<div id="slider">
-  FOO
+<div id="artwork-slider-left" class="artwork-slider">
+  @artwork.images
 </div>
 
-<button id="trigger">
-  DO IT
-</button>
+<div id="artwork-slider-right" class="artwork-slider">
+  @artwork.images
+</div>
+
+<i id="trigger-left" class="fa fa-caret-right fa-5x"></i>
+<i id="trigger-right" class="fa fa-caret-left fa-5x"></i>
 
 <% @artwork.comments.each do |comment| %>
   <div class="col-xs-12 artwork-comment">
