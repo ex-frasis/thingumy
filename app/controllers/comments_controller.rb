@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
         text: comment_text
       )
     end
-    redirect_to "/artwork/#{artwork.id}"
+    redirect_to "/artwork/#{artwork.slug}"
   end
 
   def artwork
