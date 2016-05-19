@@ -1,7 +1,7 @@
 class LikesController < ApplicationController
   def new
     Like.find_or_create_by(artwork: artwork, user: @cached_guest_user)
-    redirect_to "/artwork/#{artwork.id}"
+    redirect_to "/artwork/#{artwork.slug}"
   end
 
   def artwork
