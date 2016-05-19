@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/about' => 'static_page#about'
   get '/exhibition' => 'static_page#exhibition'
 
-  get 'artwork/:id' => 'artwork#show'
+  get 'artwork/:slug' => 'artwork#show'
   get 'artists/' => 'artists#index'
 
   resources :comments

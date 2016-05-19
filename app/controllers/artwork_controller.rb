@@ -5,11 +5,11 @@ class ArtworkController < ApplicationController
   end
 
   def artwork
-    @artwork ||= Artwork.find_by_id(artwork_id)
+    @artwork ||= Artwork.find_by(slug: artwork_slug)
   end
 
   protected
-  def artwork_id
-    params.require("id")
+  def artwork_slug
+    params.require("slug")
   end
 end
