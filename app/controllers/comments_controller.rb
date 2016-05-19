@@ -1,9 +1,11 @@
 class CommentsController < ApplicationController
   def create
-    @comment = Comment.create(
-      artwork: artwork,
-      text: comment_text
-    )
+    if comment_text.strip != ""
+      @comment = Comment.create(
+        artwork: artwork,
+        text: comment_text
+      )
+    end
     redirect_to "/artwork/#{artwork.id}"
   end
 

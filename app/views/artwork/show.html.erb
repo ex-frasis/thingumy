@@ -28,8 +28,8 @@
   @artwork.images
 </div>
 
-<i id="trigger-left" class="fa fa-caret-right fa-5x"></i>
-<i id="trigger-right" class="fa fa-caret-left fa-5x"></i>
+<i id="trigger-left" class="fa fa-caret-right fa-5x trigger"></i>
+<i id="trigger-right" class="fa fa-caret-left fa-5x trigger"></i>
 
 <% @artwork.comments.each do |comment| %>
   <div class="artwork-comment">
@@ -39,8 +39,10 @@
   </div>
 <% end %>
 
-<%= form_for @comment, url: "/comments" do |comment_form| %>
-  <%= comment_form.text_field :text %>
-  <%= hidden_field_tag(:artwork_id, @artwork.id) %>
-<% end %>
-
+<div class="comment-form">
+  <%= form_for @comment, url: "/comments" do |comment_form| %>
+    <%= comment_form.text_field :text %>
+    <%= hidden_field_tag(:artwork_id, @artwork.id) %>
+    <%= comment_form.submit "Post", class: "btn btn-default btn-sm btn-form-submit" %>
+  <% end %>
+</div>

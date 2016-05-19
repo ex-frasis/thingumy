@@ -34,6 +34,10 @@
   background-color: black;
 }
 
+.trigger {
+  color: black;
+}
+
 #trigger-right {
   position: absolute;
   right: -2px;
@@ -44,4 +48,14 @@
   position: absolute;
   left: -2px;
   top: 20vh;
+}
+
+.comment-form {
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  .btn-form-submit {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
