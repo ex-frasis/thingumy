@@ -38,10 +38,12 @@
 <i id="trigger-right" class="fa fa-caret-left fa-5x trigger"></i>
 
 <% @artwork.comments.each do |comment| %>
-  <div class="artwork-comment">
-    <span class="artwork-comment-text">
-      <%= comment.text %>
-    </span>
+  <div class="row">
+    <div class="artwork-comment">
+      <span class="artwork-comment-text">
+        <%= comment.text %>
+      </span>
+    </div>
   </div>
 <% end %>
 
