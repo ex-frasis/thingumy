@@ -63,7 +63,13 @@
 
 .heart-image {
   img {
-    width: 100%;
+    width: 90%;
     padding-top: 25px;
+  }
+  .like-count {
+    font-size: 12px;
+    position: absolute;
+    top: 55px;
+    left: 50px;
   }
 }
