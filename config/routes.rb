@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get '/sign_in' => 'static_page#sign_in'
 
   get 'artwork/:slug' => 'artwork#show'
-  get 'artists/' => 'artists#index'
+  get 'artists' => 'artists#index'
+  get 'artists/:slug', to: redirect('/artwork/%{slug}')
 
   resources :comments
   resources :likes
