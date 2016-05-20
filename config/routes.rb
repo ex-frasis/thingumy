@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/about' => 'static_page#about'
   get '/exhibition' => 'static_page#exhibition'
   get '/sign_in' => 'static_page#sign_in'
+  get '/map' => 'static_page#map'
 
   get 'artwork/:slug' => 'artwork#show'
   get 'artists' => 'artists#index'

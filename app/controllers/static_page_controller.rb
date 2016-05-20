@@ -3,6 +3,10 @@ class StaticPageController < ApplicationController
     render :sign_in
   end
 
+  def map
+    render :map
+  end
+
   def home
     recent_comments
     top_artists
