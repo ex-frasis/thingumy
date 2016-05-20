@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'artwork/:slug' => 'artwork#show'
   get 'artists' => 'artists#index'
-  get 'artists/:slug', to: redirect('/artwork/%{slug}')
+  get 'artist/:slug', to: redirect('/artwork/%{slug}')
 
   resources :comments
   resources :likes
