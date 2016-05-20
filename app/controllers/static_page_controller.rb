@@ -18,7 +18,7 @@ class StaticPageController < ApplicationController
   end
 
   def top_artists
-    @top_artists = Like.group(:artwork_id).count.entries.sort{|x,y| y[1] <=> x[1]}[0..5].map{|id| Artist.find_by_id(id[1])}.uniq
+    @top_artists = Like.group(:artwork_id).count.entries.sort{|x,y| y[1] <=> x[1]}[0..5].map{|id| Artist.find_by_id(id[0])}.uniq.compact
   end
 
   def about
