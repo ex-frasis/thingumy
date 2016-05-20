@@ -13,10 +13,13 @@
     </div>
   </div>
   <div class="col-xs-3">
-    <%= link_to new_like_path(artwork_id: @artwork.id) do %>
-      <i class="fa fa-heart-o fa-3x"></i>
+    <% if @artwork.liked_by? @cached_guest_user %>
+      <%= image_tag "yellow_heart.png" %>
+    <% else %>
+      <%= link_to new_like_path(artwork_id: @artwork.id) do %>
+        <%= image_tag "black_heart.png" %>
+      <% end %>
     <% end %>
-    <%= "you liked it" if @artwork.liked_by? @cached_guest_user %>
   </div>
 </div>
 
