@@ -5,24 +5,18 @@ var aboutPageHeight = function () {
   );
 }
 
-var timeoutId = undefined;
-
-function cancelTimeout () {
-  window.clearTimeout(timeoutId);
-  timeoutId = undefined;
+var reload = function () {
+  window.location.reload();
 }
 
-function setRefresh () {
-  cancelTimeout();
+var refreshHomePage = function () {
   if ( window.location.pathname === "/" || window.location.pathname === "/home" ) {
-    timeoutId = window.setTimeout(function () {
-      window.location.reload();
-    }, 15000);
+    window.setTimeout(reload, 15000);
   }
 }
 
 $(document).ready(aboutPageHeight);
 $(document).on('page:load', aboutPageHeight);
 
-$(document).ready(setRefresh);
-$(document).on('page:load', setRefresh);
+$(document).ready(refreshHomePage);
+$(document).on('page:load', refreshHomePage);
