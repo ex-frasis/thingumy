@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
   rescue ActiveRecord::RecordNotFound # if session[:guest_user_id] invalid
     session[:guest_user_id] = nil
     guest_user if with_retry
+  ensure
+    if @cached_guest_user.nil? || @cached_guest_user.initials.nil?
+      redirect_to "/sign_in"
+    end
   end
 
   private
