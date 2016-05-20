@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     guest_user if with_retry
   ensure
     if @cached_guest_user.nil? || @cached_guest_user.initials.nil?
-      redirect_to "/sign_in"
+      redirect_to "/sign_in" unless request.fullpath == "/sign_in"
     end
   end
 
