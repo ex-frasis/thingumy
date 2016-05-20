@@ -1,1 +1,5 @@
-SIGN IN
+<%= form_tag "/exfrasis_users", method: "post" do %>
+  <%= text_field_tag :initials %>
+  <%= hidden_field_tag(:user_id, @cached_guest_user.id) %>
+  <%= submit_tag "Sign In", class: "btn btn-default btn-initial-sign-in" %>
+<% end %>
