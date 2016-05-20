@@ -1,5 +1,15 @@
-<%= form_tag "/exfrasis_users", method: "post" do %>
-  <%= text_field_tag :initials %>
-  <%= hidden_field_tag(:user_id, @cached_guest_user.id) %>
-  <%= submit_tag "Sign In", class: "btn btn-default btn-initial-sign-in" %>
-<% end %>
+<h3 class="exfrasis-heading">
+  Sign in
+</h3>
+
+<div class="col-xs-12">
+  You need to input your initials to continue - this way your comments and likes
+  are recognizably yours.
+</div>
+<div class="col-xs-12">
+  <%= form_tag "/exfrasis_users", method: "post" do %>
+    <%= text_field_tag :initials %>
+    <%= hidden_field_tag(:user_id, @cached_guest_user.id) %>
+    <%= submit_tag "Sign In", class: "btn btn-xs btn-default btn-initial-sign-in" %>
+  <% end %>
+</div>
