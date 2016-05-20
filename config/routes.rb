@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   get 'artwork/:slug' => 'artwork#show'
   get 'artists/' => 'artists#index'
 
+  resources :comments
+  resources :likes
   post '/exfrasis_users' => 'users#create'
 end

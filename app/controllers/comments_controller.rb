@@ -1,9 +1,11 @@
 class CommentsController < ApplicationController
   def create
+    binding.pry
     if comment_text.strip != ""
       @comment = Comment.create(
         artwork: artwork,
-        text: comment_text
+        text: comment_text,
+        user: @cached_guest_user
       )
     end
     redirect_to "/artwork/#{artwork.slug}"
