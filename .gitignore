@@ -5,11 +5,11 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+.bundle
 # Ignore vagrant working state
-/.vagrant
+.vagrant
 
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
-/tmp
+tmp/
