@@ -7,13 +7,13 @@
         </h3>
       </div>
     </div>
-    <% @top_artists.each do |artist| %>
+    <% @top_artwork.each do |artwork| %>
       <div class="row artist-top-liked-row">
         <div class="col-md-6 col-md-offset-2 col-xs-6">
-          <%= artist.to_s %>
+          <%= artwork.artist_name %>
         </div>
         <div class="col-md-2 col-xs-6">
-          <%= artist.artwork.likes.count %>
+          <%= artwork.likes.count %>
           hearts
         </div>
       </div>

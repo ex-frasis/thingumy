@@ -9,7 +9,7 @@ class StaticPageController < ApplicationController
 
   def home
     recent_comments
-    top_artists
+    top_artwork
     render :home
   end
 
@@ -17,8 +17,8 @@ class StaticPageController < ApplicationController
     @recent_comments = Comment.order(created_at: :desc).limit(10)
   end
 
-  def top_artists
-    @top_artists = Like.group(:artwork_id).count.entries.sort{|x,y| y[1] <=> x[1]}[0..5].map{|id| Artwork.find_by_id(id[0])}.uniq.compact
+  def top_artwork
+    @top_artwork = Like.group(:artwork_id).count.entries.sort{|x,y| y[1] <=> x[1]}[0..5].map{|id| Artwork.find_by_id(id[0])}.uniq.compact
   end
 
   def about
