@@ -39,10 +39,15 @@
 
 <% @artwork.comments.each do |comment| %>
   <div class="row">
-    <div class="artwork-comment">
-      <span class="artwork-comment-text">
-        <%= comment.text %>
-      </span>
+    <div class="col-xs-2 artwork-commenter">
+      <%= comment.try(:user).try(:initials) %>
+    </div>
+    <div class="col-xs-10">
+      <div class="artwork-comment">
+        <span class="artwork-comment-text">
+          <%= comment.text %>
+        </span>
+      </div>
     </div>
   </div>
 <% end %>

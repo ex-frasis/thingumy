@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
   def create
-    binding.pry
     if comment_text.strip != ""
       @comment = Comment.create(
         artwork: artwork,
