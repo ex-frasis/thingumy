@@ -26,6 +26,15 @@
   </div>
 </div>
 
+<div id="artist-statement">
+  <button class="btn btn-default btn-xs" id="expand-artist-statement">
+    tap for artist statement
+  </button>
+  <p id="artist-statement-text">
+    <%= @artwork.artist_statement %>
+  </p>
+</div>
+
 <% @artwork.comments.each do |comment| %>
   <div class="row">
     <div class="col-xs-2 artwork-commenter">
