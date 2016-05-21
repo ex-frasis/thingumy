@@ -26,14 +26,26 @@
   </div>
 </div>
 
-<div id="artist-statement">
-  <button class="btn btn-default btn-xs" id="expand-artist-statement">
-    tap for artist statement
-  </button>
-  <p id="artist-statement-text">
-    <%= @artwork.artist_statement %>
-  </p>
-</div>
+<% if @artwork.artist_statement %>
+  <div id="artist-statement">
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <div id="expand-artist-statement">
+          <i class="fa fa-plus-circle fa-2s"></i>
+          expand artists statement
+        </div>
+      </div>
+      <div class="col-xs-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-2">
+        <p id="artist-statement-text">
+        <%= @artwork.artist_statement %>
+        </p>
+      </div>
+    </div>
+  </div>
+<% end %>
 
 <% @artwork.comments.each do |comment| %>
   <div class="row">
